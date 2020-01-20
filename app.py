@@ -28,10 +28,25 @@ def fetch_data(q):
     )
     return df
 
+#########################
+# Dashboard Layout / View
+#########################
 
+# Set up Dashboard and create layout
+app = dash.Dash()
+app.css.append_css({
+    "external_url": "https://codepen.io/chriddyp/pen/bWLwgP.css"
+})
 
+app.layout = html.Div([
 
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+    # Page Header
+    html.Div([
+        html.H1('Project Header')
+    ]),
+
+])
+
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
