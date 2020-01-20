@@ -17,6 +17,20 @@ from sqlalchemy import create_engine
 conn = create_engine(os.environ['DB_URI'])
 
 
+###########################
+# Data Manipulation / Model
+###########################
+
+def fetch_data(q):
+    df = pd.read_sql(
+        sql=q,
+        con=conn
+    )
+    return df
+
+
+
+
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
