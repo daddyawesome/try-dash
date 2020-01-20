@@ -9,6 +9,14 @@ import dash_html_components as html
 import plotly.figure_factory as ff
 import plotly.graph_objs as go
 
+# pydata stack
+import pandas as pd
+from sqlalchemy import create_engine
+
+# set params
+conn = create_engine(os.environ['DB_URI'])
+
+
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
