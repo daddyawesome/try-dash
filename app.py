@@ -1,6 +1,13 @@
+# standard library
+import os
+
+# dash libs
 import dash
+from dash.dependencies import Input, Output
 import dash_core_components as dcc
 import dash_html_components as html
+import plotly.figure_factory as ff
+import plotly.graph_objs as go
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
